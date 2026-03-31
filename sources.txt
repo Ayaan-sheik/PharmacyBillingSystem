@@ -1,0 +1,14 @@
+﻿C:\Users\Ayaan Sheik\Desktop\OSDL PROJECT\PharmaSync_Project\src\pharmasync\gui\AdminDashboard.java
+C:\Users\Ayaan Sheik\Desktop\OSDL PROJECT\PharmaSync_Project\src\pharmasync\gui\LoginScreen.java
+C:\Users\Ayaan Sheik\Desktop\OSDL PROJECT\PharmaSync_Project\src\pharmasync\gui\PharmacistDashboard.java
+C:\Users\Ayaan Sheik\Desktop\OSDL PROJECT\PharmaSync_Project\src\pharmasync\gui\PharmaSyncApp.java
+C:\Users\Ayaan Sheik\Desktop\OSDL PROJECT\PharmaSync_Project\src\pharmasync\managers\CSVManager.java
+C:\Users\Ayaan Sheik\Desktop\OSDL PROJECT\PharmaSync_Project\src\pharmasync\managers\InventoryManager.java
+C:\Users\Ayaan Sheik\Desktop\OSDL PROJECT\PharmaSync_Project\src\pharmasync\managers\SessionManager.java
+C:\Users\Ayaan Sheik\Desktop\OSDL PROJECT\PharmaSync_Project\src\pharmasync\models\CartItem.java
+C:\Users\Ayaan Sheik\Desktop\OSDL PROJECT\PharmaSync_Project\src\pharmasync\models\DrugCategory.java
+C:\Users\Ayaan Sheik\Desktop\OSDL PROJECT\PharmaSync_Project\src\pharmasync\models\Medicine.java
+C:\Users\Ayaan Sheik\Desktop\OSDL PROJECT\PharmaSync_Project\src\pharmasync\models\OverTheCounterDrug.java
+C:\Users\Ayaan Sheik\Desktop\OSDL PROJECT\PharmaSync_Project\src\pharmasync\models\PrescriptionDrug.java
+C:\Users\Ayaan Sheik\Desktop\OSDL PROJECT\PharmaSync_Project\src\pharmasync\models\User.java
+C:\Users\Ayaan Sheik\Desktop\OSDL PROJECT\PharmaSync_Project\src\pharmasync\threads\LowStockNotifier.java

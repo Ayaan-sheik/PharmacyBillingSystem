@@ -1,0 +1,4 @@
+type,id,name,price,quantity,category,extra_field
+rx,MED001,Amoxicillin,15.50,100,TABLET,Dr. Smith
+otc,MED002,Ibuprofen,8.99,50,TABLET,false
+otc,MED003,Cough Syrup,14.00,8,SYRUP,false
