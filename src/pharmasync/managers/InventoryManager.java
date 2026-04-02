@@ -59,7 +59,7 @@ public class InventoryManager {
         return removed;
     }
 
-    public synchronized boolean updateMedicine(String id, Double newPrice, int newStock) {
+    public synchronized boolean updateMedicine(String id, String newName, pharmasync.models.DrugCategory newCategory, Double newPrice, int newStock) {
         List<Medicine> currentInv = CSVManager.loadInventory();
         Optional<Medicine> med = currentInv.stream()
                 .filter(m -> m.getMedicineID().equals(id))
@@ -69,6 +69,12 @@ public class InventoryManager {
             med.get().setStockQuantity(newStock);
             if (newPrice != null) {
                 med.get().setPrice(newPrice);
+            }
+            if (newName != null && !newName.trim().isEmpty()) {
+                med.get().setName(newName);
+            }
+            if (newCategory != null) {
+                med.get().setCategory(newCategory);
             }
             CSVManager.saveInventory(currentInv);
             this.inventory = currentInv;

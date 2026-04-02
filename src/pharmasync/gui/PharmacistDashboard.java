@@ -126,6 +126,19 @@ public class PharmacistDashboard {
         stockCol.setCellValueFactory(new PropertyValueFactory<>("stockQuantity"));
 
         inventoryTable.getColumns().addAll(idCol, nameCol, priceCol, stockCol);
+
+        // Row selection highlighting
+        inventoryTable.setRowFactory(tv -> {
+            TableRow<Medicine> row = new TableRow<>();
+            row.selectedProperty().addListener((obs, wasSelected, isNowSelected) -> {
+                if (isNowSelected) {
+                    row.setStyle("-fx-background-color: #1b4f72; -fx-text-fill: white;");
+                } else {
+                    row.setStyle("");
+                }
+            });
+            return row;
+        });
     }
 
     private void refreshTable() {

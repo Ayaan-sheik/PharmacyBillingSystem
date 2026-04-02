@@ -22,8 +22,8 @@ public class LoginScreen {
         view.setAlignment(Pos.CENTER);
         view.setPadding(new Insets(40));
 
-        Label title = new Label("PharmaSync Login");
-        title.setFont(Font.font("Segoe UI", FontWeight.BOLD, 36));
+        Label title = new Label("Manipal Medicals");
+        title.setFont(Font.font("Segoe UI", FontWeight.BOLD, 48));
         title.setStyle("-fx-text-fill: white;");
 
         GridPane grid = new GridPane();
@@ -41,6 +41,7 @@ public class LoginScreen {
         txtPass.setPromptText("Enter password");
 
         Button btnLogin = new Button("Login Securely");
+        btnLogin.setDefaultButton(true);
         Label lblError = new Label();
         lblError.setStyle("-fx-text-fill: #ff5773;");
 

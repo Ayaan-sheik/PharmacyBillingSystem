@@ -40,10 +40,11 @@
 }
 
 .table-view .column-header-background {
-    -fx-background-color: #0f3460;
+    -fx-background-color: darkblue;
 }
 
 .table-view .column-header, .table-view .filler {
+    -fx-background-color: darkblue;
     -fx-size: 35;
     -fx-border-width: 0 0 1 0;
     -fx-border-color: 
