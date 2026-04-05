@@ -1,0 +1,12 @@
+========== Manipal Medicals ==========
+            PharmaSync Receipt
+--------------------------------------
+Norfloxacin 400mg      x2  ₹12.36
+ORS (Sachet)           x4  ₹84.48
+Vitamin C 500mg        x3  ₹5.13
+Digoxin 0.25mg         x3  ₹5.56
+Fluconazole 150mg      x2  ₹30.90
+Paracetamol 500mg      x2  ₹1.90
+--------------------------------------
+Grand Total:            ₹140.33
+======================================

@@ -1,0 +1,10 @@
+========== Manipal Medicals ==========
+            PharmaSync Receipt
+--------------------------------------
+Tramadol 50mg/ml       x1  ₹35.20
+Hydrochlorothiazide 12.5mg x3  ₹7.72
+Cetirizine 10mg        x4  ₹7.60
+Diclofenac Sodium 75mg x3  ₹82.50
+--------------------------------------
+Grand Total:            ₹133.03
+======================================

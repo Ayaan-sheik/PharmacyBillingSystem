@@ -1,5 +1,0 @@
----- PharmaSync Receipt ----
-Ibuprofen x1: $8.54
-Cough Syrup x1: $11.76
-Grand Total: $20.30
------------------------------

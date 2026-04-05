@@ -1,5 +1,104 @@
-type,id,name,price,quantity,category,extra_field
-rx,MED001,Amoxicillin,15.50,98,TABLET,Dr. Smith
-otc,MED002,Ibuprofen,8.99,45,TABLET,false
-otc,MED003,Cough Syrup,14.00,7,SYRUP,false
-otc,MED004,paracetamol,150.00,99,TABLET,false
+type,id,name,price,quantity,category,extra_field,expiry_date
+otc,MED001,Paracetamol 500mg,1.00,1000,TABLET,false,2027-11-11
+otc,MED002,Paracetamol 125mg/5ml,45.00,50,SYRUP,false,2026-06-07
+otc,MED003,Ibuprofen 400mg,1.50,500,TABLET,false,2026-12-14
+otc,MED004,Diclofenac Diethylamine,55.00,98,TOPICAL,false,2027-03-17
+rx,MED005,Amoxicillin 500mg,8.00,298,TABLET,N/A,2026-05-20
+rx,MED006,Ceftriaxone 1g,60.00,48,INJECTION,N/A,2026-10-24
+rx,MED007,Azithromycin 500mg,22.00,197,TABLET,N/A,2027-02-02
+otc,MED008,Cetirizine 10mg,2.00,600,TABLET,false,2026-08-25
+otc,MED009,Cetirizine 5mg/5ml,50.00,40,SYRUP,false,2027-06-02
+rx,MED010,Pantoprazole 40mg,7.50,800,TABLET,N/A,2026-03-31
+rx,MED011,Pantoprazole 40mg,55.00,100,INJECTION,N/A,2026-12-20
+otc,MED012,Digene (Magnesium Hydroxide),135.00,60,SYRUP,false,2027-06-28
+rx,MED013,Metformin 500mg,2.50,1200,TABLET,N/A,2027-04-04
+rx,MED014,Amlodipine 5mg,2.80,900,TABLET,N/A,2027-12-14
+rx,MED015,Atorvastatin 10mg,8.50,700,TABLET,N/A,2027-11-04
+otc,MED016,Povidone-Iodine (Betadine),80.00,50,TOPICAL,false,2027-08-24
+rx,MED017,Insulin Glargine,680.00,30,INJECTION,N/A,2028-02-17
+rx,MED018,Telmisartan 40mg,6.50,500,TABLET,N/A,2027-04-02
+rx,MED019,Domperidone 10mg/5ml,65.00,40,SYRUP,N/A,2026-07-18
+rx,MED020,Domperidone 10mg,3.00,400,TABLET,N/A,2026-10-18
+otc,MED021,Clotrimazole 1%,75.00,80,TOPICAL,false,2027-06-26
+otc,MED022,Vitamin B-Complex,2.50,1500,TABLET,false,2026-07-06
+otc,MED023,B-Complex with B12,110.00,50,SYRUP,false,2027-08-03
+rx,MED024,Ranitidine 150mg,1.20,400,TABLET,N/A,2027-12-31
+rx,MED025,Ranitidine 25mg/ml,12.00,100,INJECTION,N/A,2026-11-15
+rx,MED026,Furosemide 40mg,1.10,300,TABLET,N/A,2027-05-07
+rx,MED027,Furosemide 10mg/ml,15.00,50,INJECTION,N/A,2026-09-05
+otc,MED028,Loperamide 2mg,2.50,500,TABLET,false,2026-04-06
+otc,MED029,ORS (Sachet),22.00,300,TOPICAL,false,2027-08-13
+rx,MED030,Diclofenac Sodium 75mg,25.00,100,INJECTION,N/A,2027-08-16
+rx,MED031,Ciprofloxacin 500mg,6.50,300,TABLET,N/A,2026-03-28
+rx,MED032,Metronidazole 400mg,1.80,400,TABLET,N/A,2028-02-06
+rx,MED033,Metronidazole Infusion,35.00,60,INJECTION,N/A,2026-12-17
+rx,MED034,Albendazole 400mg,9.00,100,TABLET,N/A,2026-09-02
+rx,MED035,Albendazole 200mg/5ml,35.00,40,SYRUP,N/A,2026-10-19
+rx,MED036,Fluconazole 150mg,15.00,150,TABLET,N/A,2027-03-29
+otc,MED037,Terbinafine Cream,95.00,50,TOPICAL,false,2027-06-10
+rx,MED038,Hydrocortisone 1%,50.00,40,TOPICAL,N/A,2026-12-30
+rx,MED039,Prednisolone 5mg,1.60,400,TABLET,N/A,2027-02-19
+rx,MED040,Dexamethasone 4mg/ml,12.00,100,INJECTION,N/A,2027-03-11
+rx,MED041,Ondansetron 4mg,5.00,300,TABLET,N/A,2026-09-22
+rx,MED042,Ondansetron 2mg/5ml,45.00,200,SYRUP,N/A,2026-04-16
+rx,MED043,Ondansetron 2mg/ml,28.00,60,INJECTION,N/A,2027-01-12
+otc,MED044,Dextromethorphan (Dry Cough),95.00,80,SYRUP,false,2027-09-25
+otc,MED045,Ambroxol (Wet Cough),85.00,80,SYRUP,false,2026-09-07
+rx,MED046,Montelukast 10mg,14.00,300,TABLET,N/A,2027-04-10
+otc,MED047,Levocetirizine 5mg,4.00,400,TABLET,false,2027-07-11
+rx,MED048,Losartan 50mg,5.50,500,TABLET,N/A,2027-10-14
+rx,MED049,Aspirin 75mg,0.50,1000,TABLET,N/A,2027-09-17
+rx,MED050,Clopidogrel 75mg,10.00,400,TABLET,N/A,2027-05-20
+rx,MED051,Enoxaparin 40mg,480.00,20,INJECTION,N/A,2026-04-16
+rx,MED052,Heparin 5000 IU/ml,210.00,100,INJECTION,N/A,2028-01-25
+rx,MED053,Nitrofurantoin 100mg,10.00,200,TABLET,N/A,2026-06-19
+rx,MED054,Norfloxacin 400mg,6.00,200,TABLET,N/A,2027-03-28
+otc,MED055,Bisacodyl 5mg,1.50,300,TABLET,false,2027-05-12
+rx,MED056,Lactulose 10g/15ml,220.00,40,SYRUP,N/A,2026-03-18
+otc,MED057,Multivitamin drops,65.00,50,SYRUP,false,2026-07-21
+otc,MED058,Vitamin C 500mg,1.80,1000,TABLET,false,2027-10-27
+otc,MED059,Calcium + Vitamin D3,7.00,800,TABLET,false,2027-08-27
+rx,MED060,Iron + Folic Acid,4.50,600,TABLET,N/A,2027-10-27
+rx,MED061,Mupirocin Ointment,115.00,50,TOPICAL,N/A,2026-05-02
+rx,MED062,Fusidic Acid Cream,98.00,50,TOPICAL,N/A,2026-07-29
+otc,MED063,Benzoyl Peroxide Gel,140.00,40,TOPICAL,false,2026-06-27
+rx,MED064,Salbutamol 2mg,0.50,300,TABLET,N/A,2027-12-23
+rx,MED065,Salbutamol 2mg/5ml,40.00,40,SYRUP,N/A,2027-08-23
+rx,MED066,Alprazolam 0.25mg,3.00,100,TABLET,N/A,2026-05-19
+rx,MED067,Diazepam 5mg/ml,22.00,30,INJECTION,N/A,2027-08-22
+rx,MED068,Lorazepam 2mg,4.00,100,TABLET,N/A,2027-08-07
+rx,MED069,Phenytoin 100mg,2.80,300,TABLET,N/A,2027-05-15
+rx,MED070,Carbamazepine 200mg,4.50,300,TABLET,N/A,2026-06-16
+rx,MED071,Valproic Acid 300mg,11.00,200,TABLET,N/A,2027-10-11
+rx,MED072,Amitriptyline 25mg,3.50,200,TABLET,N/A,2027-06-14
+rx,MED073,Sertraline 50mg,12.00,150,TABLET,N/A,2027-02-18
+rx,MED074,Atenolol 50mg,4.00,400,TABLET,N/A,2027-01-03
+rx,MED075,Metoprolol 25mg,5.50,400,TABLET,N/A,2026-08-15
+rx,MED076,Digoxin 0.25mg,1.80,100,TABLET,N/A,2026-04-12
+rx,MED077,Warfarin 5mg,4.50,100,TABLET,N/A,2027-08-24
+rx,MED078,Levothyroxine 50mcg,2.80,900,TABLET,N/A,2027-02-06
+rx,MED079,Glimepiride 2mg,4.50,600,TABLET,N/A,2026-10-27
+rx,MED080,Spironolactone 25mg,5.00,200,TABLET,N/A,2027-07-27
+rx,MED081,Adrenaline (1:1000),18.00,20,INJECTION,N/A,2028-01-07
+rx,MED082,Atropine 0.6mg/ml,20.00,20,INJECTION,N/A,2027-09-20
+otc,MED083,Lidocaine 2% Jelly,60.00,40,TOPICAL,false,2027-10-07
+rx,MED084,Lidocaine 2%,35.00,50,INJECTION,N/A,2027-05-21
+rx,MED085,Artemether + Lumefantrine,130.00,40,TABLET,N/A,2027-07-10
+rx,MED086,Chloroquine 250mg,2.00,200,TABLET,N/A,2026-08-06
+rx,MED087,Rifampicin 450mg,14.00,300,TABLET,N/A,2027-09-08
+rx,MED088,Ethambutol 400mg,5.00,300,TABLET,N/A,2027-10-10
+rx,MED089,Isoniazid 100mg,2.50,300,TABLET,N/A,2027-05-10
+rx,MED090,Pyrazinamide 500mg,6.00,300,TABLET,N/A,2028-02-17
+rx,MED091,Acyclovir 400mg,15.00,100,TABLET,N/A,2026-06-10
+rx,MED092,Acyclovir Cream,120.00,30,TOPICAL,N/A,2026-06-08
+rx,MED093,Tenofovir 300mg,28.00,100,TABLET,N/A,2027-05-11
+rx,MED094,Tamsulosin 0.4mg,16.00,200,TABLET,N/A,2026-12-30
+rx,MED095,Finasteride 5mg,20.00,100,TABLET,N/A,2026-07-14
+rx,MED096,Sildenafil 50mg,28.00,100,TABLET,N/A,2026-08-08
+rx,MED097,Baclofen 10mg,11.00,100,TABLET,N/A,2026-03-21
+rx,MED098,Tramadol 50mg,10.00,100,TABLET,N/A,2027-12-24
+rx,MED099,Tramadol 50mg/ml,32.00,12,INJECTION,N/A,2027-04-21
+rx,MED100,Hydrochlorothiazide 12.5mg,2.50,300,TABLET,N/A,2027-06-13
+otc,MED101,Ketoconazole 2%,145.00,40,TOPICAL,false,2026-03-14
+otc,MED102,Calamine Lotion,90.00,50,TOPICAL,false,2028-02-12
+otc,MED103,Iron Supplement,130.00,60,SYRUP,false,2026-06-27

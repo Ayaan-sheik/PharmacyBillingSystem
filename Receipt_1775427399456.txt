@@ -1,0 +1,11 @@
+========== Manipal Medicals ==========
+            PharmaSync Receipt
+--------------------------------------
+Amoxicillin 500mg      x5  ₹41.20
+Diclofenac Diethylamine x5  ₹264.00
+Digene (Magnesium Hydroxide) x1  ₹132.30
+Loperamide 2mg         x5  ₹11.88
+Diclofenac Sodium 75mg x2  ₹55.00
+--------------------------------------
+Grand Total:            ₹504.38
+======================================

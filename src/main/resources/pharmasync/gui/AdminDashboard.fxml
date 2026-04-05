@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.chart.*?>
+
+<!--
+    AdminDashboard.fxml
+    Rubric: Demonstrates multiple layouts in a single FXML:
+      - BorderPane  : master layout (root container)
+      - VBox        : left-side navigation panel
+      - GridPane    : "Add / Update Medicine" data entry form
+      - HBox        : top bar and button groups
+      - TabPane     : Inventory vs Analytics tabs
+-->
+<BorderPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="pharmasync.gui.AdminDashboardController"
+            minWidth="1000" minHeight="680"
+            stylesheets="@styles.css">
+
+    <!-- ═══════════ TOP BAR ═══════════ -->
+    <top>
+        <HBox styleClass="top-bar" spacing="16" alignment="CENTER_LEFT">
+            <Label text="Admin Dashboard — Manipal Medicals" styleClass="header-label"/>
+            <HBox spacing="15" alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                <Label fx:id="lblUserInfo" text="Logged in as: User" styleClass="user-label" style="-fx-text-fill: white;"/>
+                <Button text="🌓 Toggle Theme" styleClass="neu-button" onAction="#toggleTheme"/>
+                <Button text="Logout" styleClass="neu-button-danger" onAction="#handleLogout"/>
+            </HBox>
+        </HBox>
+    </top>
+
+    <!-- ═══════════ LEFT — VBox Navigation ═══════════ -->
+    <left>
+        <VBox styleClass="side-nav" spacing="10">
+            <Label text="NAVIGATION" styleClass="nav-title"/>
+            <Button text="📦  Inventory" styleClass="neu-button-nav" onAction="#showInventoryTab" maxWidth="Infinity"/>
+            <Button text="📊  Analytics" styleClass="neu-button-nav" onAction="#showAnalyticsTab" maxWidth="Infinity"/>
+            <Region VBox.vgrow="ALWAYS"/>
+            <Label text="PharmaSync v1.0" styleClass="footer-label"/>
+        </VBox>
+    </left>
+
+    <!-- ═══════════ CENTER — TabPane ═══════════ -->
+    <center>
+        <TabPane fx:id="tabPane" tabClosingPolicy="UNAVAILABLE">
+            <padding><Insets top="8"/></padding>
+
+            <!-- ─────── TAB 1: Manage Inventory ─────── -->
+            <Tab text="📦  Manage Inventory" fx:id="tabManage">
+                <VBox spacing="14">
+                    <padding><Insets top="14" right="16" bottom="14" left="16"/></padding>
+                    <!-- Top Search Bar -->
+                    <HBox spacing="12" alignment="CENTER_LEFT">
+                        <TextField fx:id="txtAdminSearch" promptText="🔍  Search medicines by name..."
+                                   HBox.hgrow="ALWAYS" />
+                    </HBox>
+
+                    <!-- Inventory TableView -->
+                    <TableView fx:id="adminTable" VBox.vgrow="ALWAYS" minHeight="280">
+                        <columns>
+                            <TableColumn fx:id="colId"       text="ID"          prefWidth="90"/>
+                            <TableColumn fx:id="colName"     text="Name"        prefWidth="200"/>
+                            <TableColumn fx:id="colCategory" text="Category"    prefWidth="110"/>
+                            <TableColumn fx:id="colPrice"    text="Price (₹)"   prefWidth="100"/>
+                            <TableColumn fx:id="colStock"    text="Stock"       prefWidth="80"/>
+                            <TableColumn fx:id="colType"     text="Type"        prefWidth="80"/>
+                        </columns>
+                    </TableView>
+                    
+                    <!-- Table Legend -->
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <Label text="Legend: " styleClass="form-label"/>
+                        <Label text="Low Stock (&lt;20)" style="-fx-background-color: #ffcccc; -fx-padding: 2 6; -fx-background-radius: 4;"/>
+                        <Label text="Expiring Soon (&lt;30 days)" style="-fx-background-color: #ffe4cc; -fx-padding: 2 6; -fx-background-radius: 4;"/>
+                    </HBox>
+
+                    <!-- ── GridPane Form: Add / Update Medicine ── -->
+                    <TitledPane text="Add / Update Medicine" collapsible="true" expanded="true">
+                        <GridPane styleClass="form-grid" hgap="14" vgap="12">
+                            <columnConstraints>
+                                <ColumnConstraints minWidth="110" halignment="RIGHT"/>
+                                <ColumnConstraints minWidth="180" hgrow="ALWAYS"/>
+                                <ColumnConstraints minWidth="110" halignment="RIGHT"/>
+                                <ColumnConstraints minWidth="180" hgrow="ALWAYS"/>
+                            </columnConstraints>
+
+                            <!-- Row 0 -->
+                            <Label text="Medicine ID:"  styleClass="form-label" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                            <TextField fx:id="tfId"     promptText="e.g. MED004" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                            <Label text="Category:"     styleClass="form-label" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+                            <ComboBox fx:id="cbCategory" maxWidth="Infinity"    GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+
+                            <!-- Row 1 -->
+                            <Label text="Medicine Name:" styleClass="form-label" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                            <TextField fx:id="tfName"    promptText="e.g. Paracetamol 500mg" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                            <Label text="Drug Type:"     styleClass="form-label" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+                            <ComboBox fx:id="cbType"     maxWidth="Infinity"    GridPane.rowIndex="1" GridPane.columnIndex="3"/>
+
+                            <!-- Row 2 -->
+                            <Label text="Price (₹):"   styleClass="form-label" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                            <TextField fx:id="tfPrice" promptText="e.g. 12.50"  GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+                            <Label text="Stock Qty:"   styleClass="form-label" GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+                            <TextField fx:id="tfQty"   promptText="e.g. 100"   GridPane.rowIndex="2" GridPane.columnIndex="3"/>
+
+                            <!-- Row 3 — Doctor (for Rx) -->
+                            <Label text="Doctor (Rx):"   styleClass="form-label" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                            <TextField fx:id="tfDoctor"  promptText="Leave blank for OTC" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                            <!-- Row 3 — Action Buttons -->
+                            <HBox spacing="10" GridPane.rowIndex="3" GridPane.columnIndex="2" GridPane.columnSpan="2">
+                                <Button text="✔  Add / Update" styleClass="neu-button-primary" onAction="#handleAddOrUpdate" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+                                <Button text="✖  Delete"       styleClass="neu-button-danger"  onAction="#handleDelete"/>
+                                <Button text="↺  Clear"        styleClass="neu-button"         onAction="#handleClear"/>
+                            </HBox>
+                        </GridPane>
+                    </TitledPane>
+
+                    <!-- Status label -->
+                    <Label fx:id="lblStatus" text="" styleClass="error-label"/>
+                </VBox>
+            </Tab>
+
+            <!-- ─────── TAB 2: Analytics ─────── -->
+            <Tab text="📊  Analytics" fx:id="tabAnalytics">
+                <ScrollPane fitToWidth="true" styleClass="scroll-pane">
+                    <VBox spacing="30">
+                        <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+                        
+
+                        <PieChart fx:id="pieChart"
+                                  title="Inventory Distribution by Category"
+                                  prefHeight="340" animated="true"/>
+
+                        <BarChart fx:id="revenueChart"
+                                  title="Revenue from Sales (based on Receipts)"
+                                  prefHeight="340" animated="true">
+                            <xAxis>
+                                <CategoryAxis label="Medicine"/>
+                            </xAxis>
+                            <yAxis>
+                                <NumberAxis label="Revenue (₹)"/>
+                            </yAxis>
+                        </BarChart>
+                    </VBox>
+                </ScrollPane>
+            </Tab>
+
+            <!-- ─────── TAB 3: Audit Logs ─────── -->
+            <Tab text="📜  Audit Logs" fx:id="tabAudit">
+                <VBox spacing="14">
+                    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+                    <Label text="System Activity Log" styleClass="header-label"/>
+                    <ListView fx:id="lvAuditLogs" VBox.vgrow="ALWAYS" styleClass="neu-list-view"/>
+                    <Button text="Refresh Logs" styleClass="neu-button" onAction="#refreshAuditLogs"/>
+                </VBox>
+            </Tab>
+        </TabPane>
+    </center>
+
+</BorderPane>

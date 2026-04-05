@@ -1,0 +1,11 @@
+========== Manipal Medicals ==========
+            PharmaSync Receipt
+--------------------------------------
+Pantoprazole 40mg      x3  ₹181.50
+Valproic Acid 300mg    x5  ₹56.65
+Hydrocortisone 1%      x2  ₹104.00
+Adrenaline (1:1000)    x1  ₹19.80
+Spironolactone 25mg    x1  ₹5.15
+--------------------------------------
+Grand Total:            ₹367.10
+======================================

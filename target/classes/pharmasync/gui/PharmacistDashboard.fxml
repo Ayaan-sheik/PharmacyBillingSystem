@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!--
+    PharmacistDashboard.fxml
+    Layouts used:
+      - BorderPane  : root container
+      - VBox        : center inventory panel + cart panel (right)
+      - HBox        : top bar, search+controls bar
+-->
+<BorderPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="pharmasync.gui.PharmacistController"
+            minWidth="940" minHeight="620"
+            stylesheets="@styles.css">
+
+    <!-- ═══════════ TOP BAR ═══════════ -->
+    <top>
+        <HBox styleClass="top-bar" spacing="16" alignment="CENTER_LEFT">
+            <Label text="Pharmacist Billing Terminal — Manipal Medicals" styleClass="header-label"/>
+            <HBox spacing="15" alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                <Label fx:id="lblUserInfo" text="Logged in as: User" styleClass="user-label" style="-fx-text-fill: white;"/>
+                <Button text="🌓 Toggle Theme" styleClass="neu-button" onAction="#toggleTheme"/>
+                <Button text="Logout" styleClass="neu-button-danger" onAction="#handleLogout"/>
+            </HBox>
+        </HBox>
+    </top>
+
+    <!-- ═══════════ CENTER — VBox: Search + Inventory Table ═══════════ -->
+    <center>
+        <VBox spacing="12">
+            <padding><Insets top="14" right="12" bottom="14" left="16"/></padding>
+
+            <!-- Search and Add-to-Cart controls -->
+            <HBox spacing="12" alignment="CENTER_LEFT">
+                <TextField fx:id="txtSearch" promptText="🔍  Search medicines by name..."
+                           HBox.hgrow="ALWAYS" minWidth="200"/>
+                <Label text="Qty:" styleClass="form-label"/>
+                <TextField fx:id="qtyField" prefWidth="60" text="1"/>
+                <Button text="＋  Add to Cart" styleClass="neu-button-primary" onAction="#handleAddToCart"/>
+            </HBox>
+
+            <!-- Inventory TableView -->
+            <TableView fx:id="inventoryTable" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="colId"    text="ID"        prefWidth="90"/>
+                    <TableColumn fx:id="colName"  text="Medicine"  prefWidth="220"/>
+                    <TableColumn fx:id="colCat"   text="Category"  prefWidth="110"/>
+                    <TableColumn fx:id="colPrice" text="Price (₹)" prefWidth="100"/>
+                    <TableColumn fx:id="colStock" text="Stock"     prefWidth="80"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+    <!-- ═══════════ RIGHT — VBox: Cart Panel ═══════════ -->
+    <right>
+        <VBox styleClass="cart-panel" spacing="14">
+            <Label text="🛒  Current Cart" styleClass="section-title"/>
+            <ListView fx:id="cartList" VBox.vgrow="ALWAYS" minHeight="200"/>
+            <Label fx:id="lblTotal" text="Total: ₹0.00" styleClass="total-label"/>
+            <Separator/>
+            <Button text="✔  Checkout &amp; Print Receipt"
+                    styleClass="neu-button-primary"
+                    onAction="#handleCheckout"
+                    maxWidth="Infinity"/>
+            <Button text="✖  Clear Cart"
+                    styleClass="neu-button-danger"
+                    onAction="#handleClearCart"
+                    maxWidth="Infinity"/>
+            <Label fx:id="lblCartStatus" text="" styleClass="error-label"/>
+        </VBox>
+    </right>
+
+</BorderPane>

@@ -1,0 +1,9 @@
+========== Manipal Medicals ==========
+            PharmaSync Receipt
+--------------------------------------
+Tramadol 50mg/ml       x2  ₹70.40
+Hydrocortisone 1%      x1  ₹52.00
+Pantoprazole 40mg      x4  ₹242.00
+--------------------------------------
+Grand Total:            ₹364.40
+======================================

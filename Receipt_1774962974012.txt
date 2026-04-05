@@ -1,6 +1,0 @@
----- PharmaSync Receipt ----
-Amoxicillin x1: $15.97
-Cough Syrup x1: $11.76
-Ibuprofen x1: $8.54
-Grand Total: $36.27
------------------------------

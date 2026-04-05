@@ -1,7 +1,0 @@
----- PharmaSync Receipt ----
-paracetamol x1: $142.50
-Ibuprofen x1: $8.54
-Ibuprofen x1: $8.54
-Ibuprofen x1: $8.54
-Grand Total: $168.12
------------------------------

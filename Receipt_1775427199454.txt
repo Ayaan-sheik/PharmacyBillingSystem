@@ -1,0 +1,8 @@
+========== Manipal Medicals ==========
+            PharmaSync Receipt
+--------------------------------------
+Diclofenac Diethylamine x3  ₹158.40
+Finasteride 5mg        x2  ₹41.20
+--------------------------------------
+Grand Total:            ₹199.60
+======================================

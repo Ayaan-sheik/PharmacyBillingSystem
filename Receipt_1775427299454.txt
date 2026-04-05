@@ -1,0 +1,9 @@
+========== Manipal Medicals ==========
+            PharmaSync Receipt
+--------------------------------------
+Telmisartan 40mg       x5  ₹33.48
+Finasteride 5mg        x1  ₹20.60
+Amlodipine 5mg         x5  ₹14.42
+--------------------------------------
+Grand Total:            ₹68.50
+======================================

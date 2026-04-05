@@ -1,0 +1,8 @@
+========== Manipal Medicals ==========
+            PharmaSync Receipt
+--------------------------------------
+Diclofenac Diethylamine x2  ₹111.10
+Ceftriaxone 1g         x2  ₹133.20
+--------------------------------------
+Grand Total:            ₹244.30
+======================================

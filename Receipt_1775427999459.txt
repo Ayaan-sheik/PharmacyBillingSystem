@@ -1,0 +1,10 @@
+========== Manipal Medicals ==========
+            PharmaSync Receipt
+--------------------------------------
+Calcium + Vitamin D3   x3  ₹19.95
+Atropine 0.6mg/ml      x3  ₹66.00
+Levocetirizine 5mg     x2  ₹7.60
+Clotrimazole 1%        x3  ₹216.00
+--------------------------------------
+Grand Total:            ₹309.55
+======================================

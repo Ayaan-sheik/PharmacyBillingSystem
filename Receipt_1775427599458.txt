@@ -1,0 +1,10 @@
+========== Manipal Medicals ==========
+            PharmaSync Receipt
+--------------------------------------
+Amlodipine 5mg         x3  ₹8.65
+Digene (Magnesium Hydroxide) x3  ₹396.90
+Aspirin 75mg           x5  ₹2.58
+Metformin 500mg        x3  ₹7.72
+--------------------------------------
+Grand Total:            ₹415.85
+======================================

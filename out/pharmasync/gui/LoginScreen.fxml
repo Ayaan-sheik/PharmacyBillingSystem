@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="pharmasync.gui.LoginController"
+      alignment="CENTER"
+      spacing="28"
+      styleClass="login-root"
+      minWidth="480" minHeight="420"
+      stylesheets="@styles.css">
+
+    <padding><Insets top="50" right="60" bottom="30" left="60"/></padding>
+
+    <Label text="Manipal Medicals" styleClass="login-title"/>
+    <Label text="PharmaSync — Secure Staff Portal" styleClass="login-subtitle"/>
+
+    <!-- Neumorphic Card containing the form -->
+    <VBox styleClass="login-card" spacing="22" alignment="CENTER" maxWidth="380">
+        <GridPane hgap="14" vgap="14" alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints minWidth="90" halignment="RIGHT"/>
+                <ColumnConstraints minWidth="200" hgrow="ALWAYS"/>
+            </columnConstraints>
+
+            <Label text="Username" styleClass="form-label"
+                   GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="txtUser" promptText="Enter username"
+                       GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <Label text="Password" styleClass="form-label"
+                   GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <PasswordField fx:id="txtPass" promptText="Enter password"
+                           GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        </GridPane>
+
+        <Button fx:id="btnLogin" text="Login Securely"
+                styleClass="neu-button-primary"
+                onAction="#handleLogin"
+                defaultButton="true"
+                maxWidth="Infinity"/>
+
+        <Label fx:id="lblError" text="" styleClass="error-label"/>
+    </VBox>
+
+    <Label text="© 2025 Manipal Medicals — All Rights Reserved" styleClass="footer-label"/>
+</VBox>
