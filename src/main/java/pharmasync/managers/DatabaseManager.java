@@ -264,6 +264,31 @@ public class DatabaseManager {
         return logs;
     }
 
+    /**
+     * Retrieves stored receipt content strings from the database and splits them into lines.
+     * Filters for lines containing item data (name, quantity, price).
+     */
+    public List<String> getReceiptLines() {
+        List<String> lines = new ArrayList<>();
+        String sql = "SELECT content FROM receipts;";
+        try (PreparedStatement ps = getConnection().prepareStatement(sql);
+             ResultSet rs = ps.executeQuery()) {
+            while (rs.next()) {
+                // Split each receipt into lines and collect only item lines
+                String[] receiptLines = rs.getString("content").split("\n");
+                for (String line : receiptLines) {
+                    // Item lines contain " x" and "₹" or "$" — skip headers/footers
+                    if (line.contains(" x") && (line.contains("₹") || line.contains("$"))) {
+                        lines.add(line);
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            System.err.println("[DB] getReceiptLines error: " + e.getMessage());
+        }
+        return lines;
+    }
+
     // ── Clean shutdown ────────────────────────────────────────────────────
     public void close() {
         try {
